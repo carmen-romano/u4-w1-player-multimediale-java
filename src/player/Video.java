@@ -15,10 +15,6 @@ public class Video extends Multimediale implements Play, Volume, Luminosità {
 
     }
 
-    @Override
-    public int durata() {
-        return 0;
-    }
 
     @Override
     public void abbassaVolume() {
