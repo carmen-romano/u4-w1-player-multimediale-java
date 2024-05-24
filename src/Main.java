@@ -11,9 +11,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Multimediale[] lettoreMultimediale = new Multimediale[5];
         Scanner scanner = new Scanner(System.in);
-
+        ///Scelta utente creazione player
         for (int i = 0; i < lettoreMultimediale.length; i++) {
             System.out.println("Scegli il tipo di elemento da creare: 1 = Immagine, 2 = Video, 3 = Audio");
             int sceltaUtente = scanner.nextInt();
@@ -37,30 +38,29 @@ public class Main {
                     break;
                 default:
                     System.out.println("Scelta non valida. Inserisci 1, 2 o 3.");
-
+                    i--;
                     break;
             }
         }
 
+
         while (true) {
             {
-                System.out.println("Inserisci il numero dell'elemento da riprodurre/mostrare (da 1 a 5, 0 per chiudere):");
-                int sceltaEsecuzione = scanner.nextInt();
+                System.out.println("Inserisci il numero dell'elemento da riprodurre/mostrare (da 1 a 5, 0 per chiudere)");
+                int sceltaRiproduzione = scanner.nextInt();
 
-                if (sceltaEsecuzione == 0) {
+                if (sceltaRiproduzione == 0) {
                     break;
-                }
-
-                if (sceltaEsecuzione >= 1 && sceltaEsecuzione <= 5) {
-
-                    if (lettoreMultimediale[sceltaEsecuzione] instanceof Play) {
-                        ((Play) lettoreMultimediale[sceltaEsecuzione]).play();
-                    } else if (lettoreMultimediale[sceltaEsecuzione] instanceof Immagine) {
-                        ((Immagine) lettoreMultimediale[sceltaEsecuzione]).show();
+                } else if (sceltaRiproduzione >= 1 && sceltaRiproduzione <= 5) {
+                    if (lettoreMultimediale[sceltaRiproduzione - 1] instanceof Play) {
+                        ((Play) lettoreMultimediale[sceltaRiproduzione - 1]).play();
+                    } else if (lettoreMultimediale[sceltaRiproduzione - 1] instanceof Immagine) {
+                        ((Immagine) lettoreMultimediale[sceltaRiproduzione - 1]).show();
                     }
                 } else {
-                    System.out.println("Scelta non valida. Inserisci un numero da 1 a 5 o 0 per chiuderes.");
+                    System.out.println("Scelta non valida. Inserisci un numero da 1 a 5 o 0 per chiudere.");
                 }
+
             }
         }
 
