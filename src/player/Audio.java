@@ -38,8 +38,8 @@ public class Audio extends Multimediale implements Play, Volume {
     @Override
     public void play() {
         for (int i = 0; i < durataAudio; i++) {
-            System.out.println("Titolo audio: " + this.titolo + " " + "!".repeat(volumeAudio));
-            
+            System.out.println("Play audio: " + this.titolo + " " + "!".repeat(volumeAudio));
+
         }
     }
 
