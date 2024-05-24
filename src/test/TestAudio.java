@@ -1,6 +1,6 @@
 package test;
 
-import player.Audio;
+import ElementiMultimediali.Audio;
 
 public class TestAudio {
     public static void main(String[] args) {

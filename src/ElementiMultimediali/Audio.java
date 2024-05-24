@@ -1,4 +1,4 @@
-package player;
+package ElementiMultimediali;
 
 import interfaces.Play;
 import interfaces.Volume;
@@ -13,27 +13,6 @@ public class Audio extends Multimediale implements Play, Volume {
         this.durataAudio = durataAudio;
     }
 
-    public Audio(String titolo) {
-        super(titolo);
-    }
-
-    public int getDurataAudio() {
-        return durataAudio;
-    }
-
-    public void setDurataAudio(int durataAudio) {
-        this.durataAudio = durataAudio;
-    }
-
-    public int getVolumeAudio() {
-        return volumeAudio;
-    }
-
-    public void setVolumeAudio(int volumeAudio) {
-        this.volumeAudio = volumeAudio;
-
-    }
-
 
     @Override
     public void play() {
@@ -42,7 +21,6 @@ public class Audio extends Multimediale implements Play, Volume {
 
         }
     }
-
 
     @Override
     public void abbassaVolume() {

@@ -1,6 +1,6 @@
 package test;
 
-import player.Video;
+import ElementiMultimediali.Video;
 
 public class TestVideo {
     public static void main(String[] args) {

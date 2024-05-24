@@ -1,25 +1,31 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
+import ElementiMultimediali.Audio;
+import ElementiMultimediali.Immagine;
+import ElementiMultimediali.Multimediale;
+import ElementiMultimediali.Video;
 import interfaces.Play;
-import player.Audio;
-import player.Immagine;
-import player.Multimediale;
-import player.Video;
 
 import java.util.Scanner;
 
-public class Main {
+public class PlayerMain {
     public static void main(String[] args) {
 
         Multimediale[] lettoreMultimediale = new Multimediale[5];
+
         Scanner scanner = new Scanner(System.in);
         ///Scelta utente creazione player
         for (int i = 0; i < lettoreMultimediale.length; i++) {
-            System.out.println("Scegli il tipo di elemento da creare: 1 = Immagine, 2 = Video, 3 = Audio");
-            int sceltaUtente = scanner.nextInt();
-            scanner.nextLine();
-
+            System.out.println(i + 1 + "/5 - " + "Scegli il tipo di elemento da creare: 1 = Immagine, 2 = Video, 3 = Audio");
+            int sceltaUtente;
+            ///Gestione errore nel caso in cui l'utente inserisse un valore non numerico
+            if (scanner.hasNextInt()) {
+                sceltaUtente = scanner.nextInt();
+            } else {
+                scanner.nextLine();
+                sceltaUtente = -1;
+            }
             switch (sceltaUtente) {
                 case 1:
                     System.out.println("Inserisci il titolo dell'immagine:");

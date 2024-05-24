@@ -1,4 +1,4 @@
-package player;
+package ElementiMultimediali;
 
 import interfaces.Luminosità;
 import interfaces.Show;
@@ -6,9 +6,6 @@ import interfaces.Show;
 public class Immagine extends Multimediale implements Show, Luminosità {
     private int luminositaImg;
 
-    public Immagine(String titolo) {
-        super(titolo);
-    }
 
     public Immagine(String titolo, int luminositaImg) {
         super(titolo);

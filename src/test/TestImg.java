@@ -1,6 +1,6 @@
 package test;
 
-import player.Immagine;
+import ElementiMultimediali.Immagine;
 
 public class TestImg {
     public static void main(String[] args) {

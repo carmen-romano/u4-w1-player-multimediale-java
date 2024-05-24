@@ -1,4 +1,4 @@
-package player;
+package ElementiMultimediali;
 
 import interfaces.Luminosità;
 import interfaces.Play;
@@ -14,10 +14,6 @@ public class Video extends Multimediale implements Play, Volume, Luminosità {
         this.volumeVideo = volumeVideo;
         this.durataVideo = durataVideo;
         this.luminositaVideo = luminositaVideo;
-    }
-
-    public Video(String titolo) {
-        super(titolo);
     }
 
     @Override
